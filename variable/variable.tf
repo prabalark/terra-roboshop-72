@@ -17,19 +17,19 @@ output "number" {
 }
 
   #boolean
- variable "boolean" {
+ variable "boolean_true" {
    default = true
  }
 
- output "boolean" {
-   value = var.boolean
+ output "boolean_true" {
+   value = var.boolean_true
  }
 
   #boolean
- variable "boolean" {
+ variable "boolean_flase" {
    default = flase
  }
 
- output "boolean" {
-   value = var.boolean
+ output "boolean_flase" {
+   value = var.boolean_flase
  }
