@@ -33,3 +33,26 @@ output "number" {
  output "boolean_false" {
    value = var.boolean_false
  }
+
+
+ #list
+ variable "list" {
+   default = [100,true,"rk"]
+ }
+
+ output "list" {
+   value = var.list[1]
+ }
+
+ #directory
+ variable "dire" {
+   default = {
+   number = 100 ,
+   boolean = true,
+   string = "rk" }
+ }
+
+ output "dire" {
+   value = var.dire[number]
+ }
+
