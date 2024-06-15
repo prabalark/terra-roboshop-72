@@ -21,3 +21,12 @@ data "aws_ami" "ami" {
 output "ami" {
   value = data.aws_ami.ami.image_id
 }
+
+# create record
+resource "aws_route53_record" "reccord" {
+  zone_id = "Z03484922ZJTTIW47BAFL"
+  name    = "frnd.devops72bat.online"
+  type    = "A"
+  ttl     = 1
+  records = [aws_instance.web.public_ip]
+}
