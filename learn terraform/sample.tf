@@ -8,7 +8,7 @@ resource "aws_instance" "web" {
   }
 }
 output "web" {
-  value = resource.aws_instance.web.public_ip
+  value = aws_instance.web.public_ip
 }
 
 ## for dynamic pick up of ami
