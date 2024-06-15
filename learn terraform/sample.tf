@@ -6,7 +6,6 @@ resource "aws_instance" "web" {
     Name = "web-server"
   }
 }
-
 output "web" {
   value = resource.aws_instance.web.public_ip
 }
