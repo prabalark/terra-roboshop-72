@@ -53,6 +53,6 @@ output "number" {
  }
 
  output "dire" {
-   value = var.dire[number]
+   value = var.dire["number"]
  }
 
