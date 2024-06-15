@@ -6,3 +6,8 @@ resource "aws_instance" "web" {
     Name = "web-server"
   }
 }
+
+output "web" {
+  value = aws_instance.web.public_ip
+  value = aws_instance.web.private_ip
+}
