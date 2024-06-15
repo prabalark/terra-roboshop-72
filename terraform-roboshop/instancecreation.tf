@@ -118,7 +118,7 @@ resource "aws_instance" "mysql" {
   instance_type = "t3.medium"
 
   tags = {
-    Name = "frontend"
+    Name = "mysql"
   }
 }
 
