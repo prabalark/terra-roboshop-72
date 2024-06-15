@@ -26,10 +26,10 @@ output "number" {
  }
 
   #boolean
- variable "boolean_flase" {
-   default = flase
+ variable "boolean_false" {
+   default = false
  }
 
- output "boolean_flase" {
-   value = var.boolean_flase
+ output "boolean_false" {
+   value = var.boolean_false
  }
