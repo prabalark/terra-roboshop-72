@@ -1,4 +1,4 @@
-output "string" {
+output "string1" {
   value = " msg of today =$(var.string)"
 }
 
