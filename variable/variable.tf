@@ -7,6 +7,7 @@ output "string" {
   value = var.string
 }
 
+
  #number
 variable "number" {
   default = 100
