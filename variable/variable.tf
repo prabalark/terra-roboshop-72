@@ -61,4 +61,7 @@ output "number" {
    #dynamic variable
  variable "env" {}
 
+ variable "auto" {}
+
+
 
