@@ -1,3 +1,7 @@
+output "float" {
+  value = var.float
+}
+
 output "env" {
   value = var.env
 }
