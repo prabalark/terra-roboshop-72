@@ -1,1 +1,1 @@
-env = "prod-rk"dev.tfvars-verdy
+env = "prod-rk"
