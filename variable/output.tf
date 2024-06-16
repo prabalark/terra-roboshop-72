@@ -6,6 +6,11 @@ output "float" {
   value = var.float
 }
 
+  ## dynamic variable
+output "str" {
+  value = var.str
+}
+
 output "env" {
   value = var.env
 }
