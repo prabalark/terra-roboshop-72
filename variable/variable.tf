@@ -56,3 +56,9 @@ output "number" {
    value = var.dire["number"]
  }
 
+ ################################################33
+
+   #dynamic variable
+ variable "env" {}
+
+
