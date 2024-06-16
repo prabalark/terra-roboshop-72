@@ -65,6 +65,8 @@ output "number" {
  ################################################33
 
    #dynamic variable
+ variable "str" {}
+
  variable "env" {}
 
  variable "auto" {}
