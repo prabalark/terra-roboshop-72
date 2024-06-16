@@ -16,6 +16,11 @@ output "number" {
   value = var.number
 }
 
+ variable "float" {
+   default = 100.11
+ }
+
+
   #boolean
  variable "boolean_true" {
    default = true
