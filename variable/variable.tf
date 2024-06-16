@@ -41,7 +41,7 @@ output "number" {
  }
 
  output "list" {
-   value = var.list[1]
+   value = var.list[1] 
  }
 
  #directory
