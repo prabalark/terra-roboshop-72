@@ -1,3 +1,7 @@
+output "string" {
+  value = " msg of today =$(var.string)"
+}
+
 output "float" {
   value = var.float
 }
