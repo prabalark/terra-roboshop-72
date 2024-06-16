@@ -1,1 +1,1 @@
-auto = "rk"
+auto = "rk s"
