@@ -1,5 +1,5 @@
 output "string1" {
-  value = " msg of today =$(var.string)"
+  value = "msg of today = $(var.string) "
 }
 
 output "float" {
