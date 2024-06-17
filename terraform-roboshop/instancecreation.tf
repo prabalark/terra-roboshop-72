@@ -37,7 +37,7 @@ resource "aws_route53_record" "frontend" {
 
 resource "aws_instance" "mongodb" {
   ami           = data.aws_ami.ami.image_id # devops-practice
-  instance_type = "var.varit3"
+  instance_type = var.varit3
   vpc_security_group_ids = [data.aws_security_group.security_group.id]
 
   tags = {
@@ -133,7 +133,7 @@ resource "aws_route53_record" "cart" {
 
 resource "aws_instance" "mysql" {
   ami           = data.aws_ami.ami.image_id # devops-practice
-  instance_type = "var.varit3"
+  instance_type = var.varit3
   vpc_security_group_ids = [data.aws_security_group.security_group.id]
 
   tags = {
