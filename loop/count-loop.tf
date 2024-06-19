@@ -3,7 +3,7 @@ resource "null_resource" "null" {
 }
 
 
-resource "null_resource" "null" {
+resource "comp_resource" "comp" {
   count= length(var.component)
 }
 
