@@ -3,10 +3,10 @@ resource "null_resource" "null" {
 }
 
 
-variable "component" {
-  default = ["forntend","mongodb","catlogue"]
+resource "null_resource" "null" {
+  count= length(var.component)
 }
 
-output "comp" {
-  value = var.component
+variable "component" {
+  default = ["forntend","mongodb","catlogue"]
 }
