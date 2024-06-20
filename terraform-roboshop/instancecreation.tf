@@ -16,18 +16,31 @@ data "aws_security_group" "security_group" {
    name = "allow-all"
 }
 
-variable "comp" {
-  default = ["forntend","mongodb","catalogue"]
+variable "component" {
+  default = {
+    frontend ={
+      Name ="frontend"
+      instance_type = "t3.small"
+    }
+    mongodb ={
+      Name ="mongodb"
+      instance_type = "t3.medium"
+    }
+    catalogue ={
+      Name ="catalogue"
+      instance_type = "t3.small"
+    }
+  }
 }
 
-resource "aws_instance" "frontend" {
-  count = length(var.comp)
+resource "aws_instance" "instance" {
+  for_each = var.component
   ami           = data.aws_ami.ami.image_id # devops-practice
-  instance_type = var.varit2
+  instance_type = each.value["instance_type"]
   vpc_security_group_ids = [data.aws_security_group.security_group.id]
 
   tags = {
-    Name = var.comp[count.index]
+    Name = each.value["Name"]
   }
 }
 
