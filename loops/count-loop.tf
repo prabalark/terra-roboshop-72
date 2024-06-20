@@ -1,3 +1,4 @@
+
 resource "var_resource" "comp" {
   count = length(var.comp)
   ## provisioner is same like variable
@@ -5,6 +6,10 @@ resource "var_resource" "comp" {
     command = var.comp[count.index]
   }
 }
+
+ provider "aws" {
+   region = "us-east-1"
+ }
 
  variable "comp" {
     default = {
