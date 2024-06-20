@@ -7,6 +7,10 @@ resource "var_resource" "comp" {
 }
 
  variable "comp" {
-    default = ["forntend","mongodb","catalogue"]
+    default = {
+      apple = 10
+      mango = 20
+      orange = 30
+    }
  }
 
