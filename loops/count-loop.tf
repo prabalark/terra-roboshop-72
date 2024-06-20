@@ -2,7 +2,7 @@ resource "null_resource" "comp7" {
   for_each = var.comp
 
   provisioner "local-exec" {
-    command = "echo  fruit_name - ${each.key} = ${each.value["price"]}"
+    command = "echo  fruit_name --> ${each.key} => ${each.value["fr_n"]} = ${each.value["price"]}"
   }
 }
 
