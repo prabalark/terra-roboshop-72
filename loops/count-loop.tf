@@ -8,11 +8,11 @@ resource "null_resource" "comp5" {
 
 variable "comp" {
   default = {
-    fr_n = apple
+    fr_n = "apple"
     price = 10
-    fr_n = orange
+    fr_n = "orange"
     price = 20
-    fr_n = grape
+    fr_n = "grape"
     price = 30
   }
 }
