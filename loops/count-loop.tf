@@ -1,5 +1,5 @@
 resource "null_resource" "comp" {
-  count= length(var.comp)
+  count = length(var.comp)
 
   provisioner "local-exec" {
     command = var.comp[count.index]
