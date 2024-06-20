@@ -2,8 +2,8 @@ resource "var_resource" "comp" {
      count = length(var.comp)
      }
 
- provisioner "var_res" {
-      command = var_resource[count.index]
+ provisioner "local-exce" {
+   command = var_resource[count.index]
  }
 
  variable "comp" {
