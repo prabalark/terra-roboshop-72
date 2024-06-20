@@ -1,4 +1,4 @@
-resource "null_resource" "comp8" {
+resource "null_resource" "comp9" {
   for_each = var.comp
 
   provisioner "local-exec" {
