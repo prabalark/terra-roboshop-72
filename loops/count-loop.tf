@@ -1,24 +1,11 @@
-resource "null_resource" "comp9" {
-  for_each = var.comp
+resource "null_resource" "list" {
+  for_each = var.list
 
   provisioner "local-exec" {
-    command = "echo  fruit_name => ${each.value["fr_n"]} = ${each.value["price"]}"
+    command = "echo ${each.key}"
   }
 }
 
-variable "comp" {
-  default = {
-    apple = {
-      fr_n = "apple"
-      price = 10
-    }
-    orange ={
-      fr_n = "orange"
-      price = 20
-    }
-    grape = {
-     fr_n = "grape"
-     price = 30
-    }
-  }
+variable "list" {
+  default = ["rk","inf","rk"]
 }
