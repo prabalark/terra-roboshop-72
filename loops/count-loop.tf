@@ -1,4 +1,4 @@
-resource "var_resource" "comp" {
+resource "null_resource" "comp" {
   count = length(var.comp)
 
   ## provisioner is same like variable
