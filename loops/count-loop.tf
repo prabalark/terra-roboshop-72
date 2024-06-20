@@ -1,8 +1,8 @@
-resource "null_resource" "comp4" {
+resource "null_resource" "comp5" {
   for_each = var.comp
 
   provisioner "local-exec" {
-    command = "echo ${each.value}"
+    command = "echo  fruit_name - ${each.key} = ${each.value}"
   }
 }
 
