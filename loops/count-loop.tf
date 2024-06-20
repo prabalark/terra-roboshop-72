@@ -1,3 +1,8 @@
 resource "null_resource" "null" {
-     count =5
+     count = length(var.comp)
      }
+
+ variable "comp" {
+      default = ["forntend","mongodb","catalogue"]
+ }
+
