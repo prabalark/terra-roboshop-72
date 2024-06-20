@@ -7,6 +7,7 @@ resource "var_resource" "comp" {
   }
 }
 
+
 provider "aws" {
   region = "us-east-1"
 }
