@@ -7,6 +7,6 @@ resource "var_resource" "comp" {
 }
 
  variable "comp" {
-      default = ["forntend","mongodb","catalogue"]
+    default = ["forntend","mongodb","catalogue"]
  }
 
