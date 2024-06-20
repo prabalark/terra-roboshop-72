@@ -1,4 +1,4 @@
-resource "null_resource" "null" {
+resource "null_resource" "comp" {
   count = length(var.comp)
 
   provisioner "local-exec" {
