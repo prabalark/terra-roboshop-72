@@ -1,8 +1,8 @@
 resource "null_resource" "comp2" {
-  count = length(var.comp)
+  for_each = var.comp
 
   provisioner "local-exec" {
-    command = "echo ${var.comp[count.index]} "
+    command = "echo ${each.key} = ${each.value}"
   }
 }
 
