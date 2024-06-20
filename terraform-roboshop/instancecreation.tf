@@ -31,15 +31,15 @@ resource "aws_instance" "frontend" {
   }
 }
 
-# # create record
-# resource "aws_route53_record" "frontend" {
-#   zone_id = "Z03484922ZJTTIW47BAFL"
-#   name    = "frontend.devops72bat.online"
-#   type    = "A"
-#   ttl     = 1
-#   records = [aws_instance.frontend.public_ip]
-# }
-#
+ # create record
+ resource "aws_route53_record" "frontend" {
+   zone_id = "Z03484922ZJTTIW47BAFL"
+   name    = "frontend.devops72bat.online"
+   type    = "A"
+   ttl     = 1
+   records = [aws_instance.frontend.public_ip]
+ }
+
 # resource "aws_instance" "mongodb" {
 #   ami           = data.aws_ami.ami.image_id # devops-practice
 #   instance_type = var.varit3
