@@ -2,7 +2,7 @@ resource "null_resource" "comp" {
   count = length(var.comp)
 
   provisioner "local-exec" {
-    command = " echo ${var.comp[count.index]} "
+    command = " echo comp_name = ${var.comp[count.index]} "
   }
 }
 
