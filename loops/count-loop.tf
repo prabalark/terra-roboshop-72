@@ -7,5 +7,9 @@ resource "null_resource" "comp1" {
 }
 
 variable "comp" {
-  default = ["frontend","mongodb","catalogue"]
+  default = {
+    apple =10
+    orange=20
+    grape=30
+  }
 }
