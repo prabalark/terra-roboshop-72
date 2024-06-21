@@ -48,10 +48,10 @@ resource "aws_instance" "instance" {
  resource "aws_route53_record" "records" {
    for_each = var.component
    zone_id = "Z03484922ZJTTIW47BAFL"
-   name    = "${each.value["name"]}.devops72bat.online"
+   name    = "${each.value["Name"]}.devops72bat.online"
    type    = "A"
    ttl     = 1
-   records = [aws_instance.instance[each.value["name"]].private_ip]
+   records = [aws_instance.instance[each.value["Name"]].private_ip]
  }
 
 # resource "aws_instance" "mongodb" {
