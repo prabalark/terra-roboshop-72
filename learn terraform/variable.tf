@@ -7,6 +7,6 @@ variable "component" {
   }
 }
 
-  output "string" {
-  value = var.component.frontend["Name"]
+  output "component" {
+   value = var.component.frontend["Name"]
 }
