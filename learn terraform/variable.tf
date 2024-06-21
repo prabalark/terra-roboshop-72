@@ -4,7 +4,9 @@ variable "component" {
       Name = "frontend"
       instance_type = "t3.small"
     }
+  }
+}
 
-output  "string" {
-  value = var.string["name"]
+  output "string" {
+  value = var.component.frontend["Name"]
 }
