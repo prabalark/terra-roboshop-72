@@ -4,9 +4,9 @@ data "aws_ami" "ami" {
   owners      = ["973714476881"]
 }
 
-variable "varit2" {
-  default = "t2.micro"
-}
+#variable "varit2" {
+#  default = "t2.micro"
+#}
 
 #variable "varit3" {
  # default = "t3.medium"
