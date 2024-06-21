@@ -28,7 +28,7 @@ variable "component" {
     }
     catalogue ={
       Name ="catalogue"
-      instance_type = "t3.small"
+      instance_type = "t3.micro"
     }
     Redis ={
       Name ="Redis"
@@ -36,11 +36,11 @@ variable "component" {
     }
     User ={
       Name ="User"
-      instance_type = "t3.small"
+      instance_type = "t3.micro"
     }
     Cart ={
       Name ="Cart"
-      instance_type = "t3.small"
+      instance_type = "t3.micro"
     }
     MySQL ={
       Name ="MySQL"
