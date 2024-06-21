@@ -24,7 +24,7 @@ variable "component" {
     }
     mongodb ={
       Name ="mongodb"
-      instance_type = "t3.medium"
+      instance_type = "t3.small"
     }
     catalogue ={
       Name ="catalogue"
@@ -44,11 +44,11 @@ variable "component" {
     }
     MySQL ={
       Name ="MySQL"
-      instance_type = "t3.medium"
+      instance_type = "t3.small"
     }
     Shipping ={
       Name ="Shipping"
-      instance_type = "t3.small"
+      instance_type = "t3.medium"
     }
     RabbitMQ ={
       Name ="RabbitMQ"
