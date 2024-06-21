@@ -32,15 +32,15 @@ variable "component" {
     }
     Redis ={
       Name ="Redis"
-      instance_type = "t3.medium"
+      instance_type = "t3.small"
     }
     User ={
       Name ="User"
-      instance_type = "t3.medium"
+      instance_type = "t3.small"
     }
     Cart ={
       Name ="Cart"
-      instance_type = "t3.medium"
+      instance_type = "t3.small"
     }
     MySQL ={
       Name ="MySQL"
@@ -48,19 +48,19 @@ variable "component" {
     }
     Shipping ={
       Name ="Shipping"
-      instance_type = "t3.medium"
+      instance_type = "t3.small"
     }
     RabbitMQ ={
       Name ="RabbitMQ"
-      instance_type = "t3.medium"
+      instance_type = "t3.small"
     }
     Payment ={
       Name ="Payment"
-      instance_type = "t3.medium"
+      instance_type = "t3.small"
     }
     Dispatch ={
       Name ="Dispatch"
-      instance_type = "t3.medium"
+      instance_type = "t3.small"
     }
   }
 }
