@@ -15,9 +15,9 @@ resource "aws_instance" "instance" {
       host = self.private_ip
     }
     inline = [
-      "rm -rf terraform-roboshop"
-      "git clone https://github.com/prabalark/terra-roboshop-72.git"
-      "cd terra-roboshop-72"
+      "rm -rf terraform-roboshop",
+      "git clone https://github.com/prabalark/terra-roboshop-72.git",
+      "cd terra-roboshop-72",
       "sudo bash ${each.value["Name"]}.sh"
     ]
   }
