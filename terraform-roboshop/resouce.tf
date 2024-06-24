@@ -7,7 +7,22 @@ resource "aws_instance" "instance" {
   tags = {
     Name = each.value["Name"]
   }
+  provisioner "remote-exec" {
+    connection {
+      type = "ssh"
+      user = "centos"
+      password = "DevOps321"
+      host = self.private_ip
+    }
+    inline = [
+      "rm -rf terraform-roboshop"
+      "git clone https://github.com/prabalark/terra-roboshop-72.git"
+      "cd terra-roboshop-72"
+      "sudo bash ${each.value["Name"]}.sh"
+    ]
+  }
 }
+
 
 # create record
 resource "aws_route53_record" "records" {
