@@ -1,8 +1,4 @@
-data "aws_ami" "ami" {
-  most_recent = true
-  name_regex  = "Centos-8-DevOps-Practice"
-  owners      = ["973714476881"]
-}
+
 
 #variable "varit2" {
 #  default = "t2.micro"
@@ -12,79 +8,57 @@ data "aws_ami" "ami" {
  # default = "t3.medium"
 #}
 
-data "aws_security_group" "security_group" {
-   name = "allow-all"
-}
 
-variable "component" {
-  default = {
-    frontend ={
-      Name ="frontend"
-      instance_type = "t3.small"
-    }
-    mongodb ={
-      Name ="mongodb"
-      instance_type = "t3.small"
-    }
-    catalogue ={
-      Name ="catalogue"
-      instance_type = "t3.micro"
-    }
-#    Redis ={
-#      Name ="Redis"
-#      instance_type = "t3.small"
-#    }
-#    User ={
-#      Name ="User"
-#      instance_type = "t3.micro"
-#    }
-#    Cart ={
-#      Name ="Cart"
-#      instance_type = "t3.micro"
-#    }
-#    MySQL ={
-#      Name ="MySQL"
-#      instance_type = "t3.small"
-#    }
-#    Shipping ={
-#      Name ="Shipping"
-#      instance_type = "t3.medium"
-#    }
-#    RabbitMQ ={
-#      Name ="RabbitMQ"
-#      instance_type = "t3.small"
-#    }
-#    Payment ={
-#      Name ="Payment"
-#      instance_type = "t3.small"
-#    }
-#    Dispatch ={
-#      Name ="Dispatch"
-#      instance_type = "t3.small"
-#    }
-  }
-}
+# variable "component" {
+#   default = {
+#  frontend ={
+#    Name ="frontend"
+#    instance_type = "t3.small"
+#  }
+#  mongodb ={
+#    Name ="mongodb"
+#    instance_type = "t3.small"
+#  }
+#  catalogue ={
+#    Name ="catalogue"
+#    instance_type = "t3.micro"
+#  }
+#  #    Redis ={
+#  #      Name ="Redis"
+#  #      instance_type = "t3.small"
+#  #    }
+#  #    User ={
+#  #      Name ="User"
+#  #      instance_type = "t3.micro"
+#  #    }
+#  #    Cart ={
+#  #      Name ="Cart"
+#  #      instance_type = "t3.micro"
+#  #    }
+#  #    MySQL ={
+#  #      Name ="MySQL"
+#  #      instance_type = "t3.small"
+#  #    }
+#  #    Shipping ={
+#  #      Name ="Shipping"
+#  #      instance_type = "t3.medium"
+#  #    }
+#  #    RabbitMQ ={
+#  #      Name ="RabbitMQ"
+#  #      instance_type = "t3.small"
+#  #    }
+#  #    Payment ={
+#  #      Name ="Payment"
+#  #      instance_type = "t3.small"
+#  #    }
+#  #    Dispatch ={
+#  #      Name ="Dispatch"
+#  #      instance_type = "t3.small"
+#  #    }
+#   }
+# }
 
-resource "aws_instance" "instance" {
-  for_each = var.component
-  ami           = data.aws_ami.ami.image_id # devops-practice
-  instance_type = each.value["instance_type"]
-  vpc_security_group_ids = [data.aws_security_group.security_group.id]
 
-  tags = {
-    Name = each.value["Name"]
-  }
-}
-
- # create record
- resource "aws_route53_record" "records" {
-   for_each = var.component
-   zone_id = "Z03484922ZJTTIW47BAFL"
-   name    = "${each.value["Name"]}.devops72bat.online"
-   type    = "A"
-   ttl     = 1
-   records = [aws_instance.instance[each.value["Name"]].private_ip]
- }
 
 # resource "aws_instance" "mongodb" {
 #   ami           = data.aws_ami.ami.image_id # devops-practice
