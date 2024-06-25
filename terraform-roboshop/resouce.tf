@@ -7,12 +7,17 @@ resource "aws_instance" "instance" {
   tags = {
     Name = each.value["Name"]
   }
+}
+
+resource "null_resource" "provisioner" {
+  depends_on = [aws_instance.instance,aws_route53_record.records]
+  for_each = var.components
   provisioner "remote-exec" {
     connection {
       type = "ssh"
       user = "centos"
       password = "DevOps321"
-      host = self.private_ip
+      host = aws_instance.instance[each.value["Name"]].private_ip
     }
     inline = [
       "rm -rf terraform-roboshop",
@@ -22,7 +27,6 @@ resource "aws_instance" "instance" {
     ]
   }
 }
-
 
 # create record
 resource "aws_route53_record" "records" {
