@@ -1,10 +1,7 @@
 env = "env-dev"
 
 components = {
-  frontend ={
-    Name ="frontend"
-    instance_type = "t3.small"
-  }
+
   mongodb ={
     Name ="mongodb"
     instance_type = "t3.small"
@@ -12,6 +9,11 @@ components = {
   catalogue ={
     Name ="catalogue"
     instance_type = "t3.micro"
+  }
+
+  frontend ={
+    Name ="frontend"
+    instance_type = "t3.small"
   }
   #    Redis ={
   #      Name ="Redis"
