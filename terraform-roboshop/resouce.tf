@@ -1,3 +1,4 @@
+# create instance
 resource "aws_instance" "instance" {
   for_each = var.components
   ami           = data.aws_ami.ami.image_id # devops-practice
@@ -9,6 +10,7 @@ resource "aws_instance" "instance" {
   }
 }
 
+  # create shell
 resource "null_resource" "provisioner" {
   depends_on = [aws_instance.instance,aws_route53_record.records]
   for_each = var.components
