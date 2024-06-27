@@ -11,7 +11,7 @@ resource "aws_instance" "instance" {
 }
 
   # create shell
-resource "null_resource" "provisioner11" {
+resource "null_resource" "provisioner12" {
 
   depends_on = [aws_instance.instance, aws_route53_record.records]
 
