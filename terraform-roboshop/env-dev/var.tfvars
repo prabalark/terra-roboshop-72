@@ -22,17 +22,17 @@ components = {
   }
 
   User ={
-    Name ="User"
+    Name ="user"
     instance_type = "t3.micro"
   }
 
   Cart ={
-    Name ="Cart"
+    Name ="cart"
     instance_type = "t3.micro"
   }
 
   MySQL ={
-    Name ="MySQL"
+    Name ="mySQL"
     instance_type = "t3.small"
     password="RoboShop@1"
   }
