@@ -11,7 +11,7 @@ resource "aws_instance" "instance" {
 }
 
   # create shell
-resource "null_resource" "provisioner10" {
+resource "null_resource" "provisioner11" {
 
   depends_on = [aws_instance.instance, aws_route53_record.records]
 
@@ -28,7 +28,7 @@ resource "null_resource" "provisioner10" {
       "rm -rf terraform-roboshop",
       "git clone https://github.com/prabalark/roboshop-72.git",
       "cd roboshop-72",
-      "sudo bash ${each.value["Name"]}.sh ${lookup(each.value,"password","dummy")}"
+      "sudo bash ${each.value["Name"]}.sh ${lookup(each.value,"password","null")}"
     ]
   }
 }
