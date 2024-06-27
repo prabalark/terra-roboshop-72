@@ -38,13 +38,13 @@ components = {
   }
 
   Shipping ={
-    Name ="Shipping"
+    Name ="shipping"
     instance_type = "t3.medium"
     password="RoboShop@1"
   }
 
-  RabbitMQ ={
-    Name ="RabbitMQ"
+  rabbitmq ={
+    Name ="rabbitmq"
     instance_type = "t3.small"
     password="RoboShop123"
   }
