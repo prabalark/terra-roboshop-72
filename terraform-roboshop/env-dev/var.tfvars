@@ -56,7 +56,7 @@ components = {
   }
 
   Dispatch ={
-    Name ="Dispatch"
+    Name ="dispatch"
     instance_type = "t3.small"
   }
 
