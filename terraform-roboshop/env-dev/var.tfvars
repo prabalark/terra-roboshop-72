@@ -50,7 +50,7 @@ components = {
   }
 
   Payment ={
-    Name ="Payment"
+    Name ="payment"
     instance_type = "t3.small"
     password="RoboShop123"
   }
