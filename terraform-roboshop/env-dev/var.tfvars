@@ -31,8 +31,8 @@ components = {
     instance_type = "t3.micro"
   }
 
-  mySQL ={
-    Name ="mySQL"
+  mysql ={
+    Name ="mysql"
     instance_type = "t3.small"
     password="RoboShop@1"
   }
