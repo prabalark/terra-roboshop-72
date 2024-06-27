@@ -37,7 +37,7 @@ components = {
     password="RoboShop@1"
   }
 
-  Shipping ={
+  shipping ={
     Name ="shipping"
     instance_type = "t3.medium"
     password="RoboShop@1"
@@ -49,13 +49,13 @@ components = {
     password="RoboShop123"
   }
 
-  Payment ={
+  payment ={
     Name ="payment"
     instance_type = "t3.small"
     password="RoboShop123"
   }
 
-  Dispatch ={
+  dispatch ={
     Name ="dispatch"
     instance_type = "t3.small"
   }
