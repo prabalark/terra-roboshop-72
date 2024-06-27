@@ -17,7 +17,7 @@ components = {
   }
 
   Redis ={
-    Name ="Redis"
+    Name ="redis"
     instance_type = "t3.small"
   }
 
