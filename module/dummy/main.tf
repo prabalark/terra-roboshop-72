@@ -1,3 +1,3 @@
 output "du1" {
-  value = "xyz"
+  value = "abc"
 }
