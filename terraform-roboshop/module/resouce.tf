@@ -1,44 +1,40 @@
 # create instance
 resource "aws_instance" "instance" {
-  for_each = var.components
   ami           = data.aws_ami.ami.image_id # devops-practice
-  instance_type = each.value["instance_type"]
+  instance_type = var.instance_type
   vpc_security_group_ids = [data.aws_security_group.security_group.id]
 
   tags = {
-    Name = each.value["Name"]
+    Name = var.compenent_name
   }
 }
 
   # create shell
 resource "null_resource" "provisioner13" {
-
   depends_on = [aws_instance.instance, aws_route53_record.records]
-
-  for_each = var.components
 
   provisioner "remote-exec" {
     connection {
       type = "ssh"
       user = "centos"
       password = "DevOps321"
-      host = aws_instance.instance[each.value["Name"]].private_ip
+      host = aws_instance.instance.private_ip      # single instance
     }
     inline = [
       "rm -rf terraform-roboshop",
       "git clone https://github.com/prabalark/roboshop-72.git",
       "cd roboshop-72",
-      "sudo bash ${each.value["Name"]}.sh ${lookup(each.value,"password","null")}"
+      "sudo bash ${var.compenent_name}.sh  ${var.password} "
     ]
   }
 }
 
 # create record
 resource "aws_route53_record" "records" {
-  for_each = var.components
   zone_id = "Z03484922ZJTTIW47BAFL"
-  name    = "${each.value["Name"]}.devops72bat.online"
+  name    = "${var.compenent_name}.devops72bat.online"
   type    = "A"
   ttl     = 1
-  records = [aws_instance.instance[each.value["Name"]].private_ip]
+  records = [aws_instance.instance.private_ip]  # single instance
 }
+
