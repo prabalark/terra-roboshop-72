@@ -1,3 +1,8 @@
+- hosts: all
+  tasks:
+    - ansible.builtin.debug:
+        msg: hello rk
+
 - name: demo on ansible
   hosts: all
   tasks:
@@ -6,7 +11,3 @@
          msg: hello world
 
 
-- hosts: all
-  tasks:
-    - ansible.builtin.debug:
-        msg: hello rk
