@@ -18,3 +18,12 @@
     - name: print sample in ansible
       ansible.builtin.debug:
         msg: x - {{ x }}
+
+- name: demo on variable
+  hosts: all
+  tasks:
+    - name: print sample in ansible
+      ansible.builtin.debug:
+        msg: x - {{ x }}
+      vars:
+         x: hello world
