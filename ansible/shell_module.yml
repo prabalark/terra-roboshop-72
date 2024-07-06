@@ -3,7 +3,7 @@
   vars_files:
     - vafil.yml
   tasks:
-    ansible.builtin.shell: uptime
-    register: output
-    ansible.builtin.debug:
+    - ansible.builtin.shell: uptime
+      register: output
+    - ansible.builtin.debug:
       msg: '{{ output }}'
