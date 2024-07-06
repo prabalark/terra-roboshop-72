@@ -2,11 +2,11 @@
 - name: demo on variable
   hosts: all
   vars:
-    x: hello world
+    xy: hello world
   tasks:
     - name: print sample in ansible
       ansible.builtin.debug:
-        msg: x - {{ x }}
+        msg: xy - {{ xy }}
 
 - name: demo on variable
   hosts: all
