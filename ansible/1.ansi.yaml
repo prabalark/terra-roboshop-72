@@ -1,14 +1,3 @@
-- hosts: all
-  tasks:
-    - ansible.builtin.debug:
-        msg: hello rk
-
-- name: demo on ansible
-  hosts: all
-  tasks:
-     - name: print sample in ansible
-       ansible.builtin.debug:
-         msg: hello world
 
 - name: demo on variable
   hosts: all
