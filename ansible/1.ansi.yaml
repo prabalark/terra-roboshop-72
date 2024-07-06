@@ -1,18 +1,10 @@
 
 - name: demo on variable
   hosts: all
-  vars:
-    xy: hello world
+  vars_files:
+     - vafil.yml
   tasks:
     - name: print sample in ansible
       ansible.builtin.debug:
         msg: xy - {{ xy }}
 
-- name: demo on variable
-  hosts: all
-  tasks:
-    - name: print sample in ansible
-      ansible.builtin.debug:
-        msg: x - {{ x }}
-      vars:
-         x: hello world
