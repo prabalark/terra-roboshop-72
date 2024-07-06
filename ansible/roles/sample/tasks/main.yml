@@ -5,3 +5,7 @@
 - name: print sample in ansible
   ansible.builtin.debug:
     msg: y - {{ y }}
+
+- name: print sample in ansible
+  ansible.builtin.debug:
+    msg: xyz - {{ xyz }}

@@ -1,4 +1,6 @@
 - hosts: all
+  vars:
+    xyz: hello world
   roles:
     - sample
 
