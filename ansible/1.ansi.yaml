@@ -1,7 +1,7 @@
 - name: demo on variable
   hosts: all
   vars_files:
-     - vafil.yml
+    - vafil.yml
   tasks:
     - name: print sample in ansible
       ansible.builtin.debug:
