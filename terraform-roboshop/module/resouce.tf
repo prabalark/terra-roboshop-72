@@ -11,6 +11,7 @@ resource "aws_instance" "instance" {
 
   # create shell
 resource "null_resource" "provisioner13" {
+  count = var.provisioner ? 1 : 0
   depends_on = [aws_instance.instance, aws_route53_record.records]
 
   provisioner "remote-exec" {
