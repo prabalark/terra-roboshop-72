@@ -1,3 +1,3 @@
-- name: demo on frntend
+- name: demo on payment
   ansible.builtin.debug:
     msg: component-payment
