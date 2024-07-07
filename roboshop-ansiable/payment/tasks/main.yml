@@ -1,3 +1,0 @@
-- name: demo on payment
-  ansible.builtin.debug:
-    msg: component-payment

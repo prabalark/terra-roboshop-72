@@ -1,3 +1,0 @@
-- name: demo on cart
-  ansible.builtin.debug:
-    msg: component-cart

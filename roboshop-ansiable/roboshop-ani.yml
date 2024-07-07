@@ -1,5 +1,0 @@
-- name: Demo
-  hosts: all
-  roles:
-    - "{{ role_name }}"
-  # giving folder-name as variable bcz many components

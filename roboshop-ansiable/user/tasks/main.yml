@@ -1,3 +1,0 @@
-- name: demo on user
-  ansible.builtin.debug:
-    msg: component-user

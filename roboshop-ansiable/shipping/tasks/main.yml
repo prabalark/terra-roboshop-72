@@ -1,3 +1,0 @@
-- name: demo on shipping
-  ansible.builtin.debug:
-    msg: component-shipping

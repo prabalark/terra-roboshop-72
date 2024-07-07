@@ -1,3 +1,0 @@
-- name: demo on frnt
-  ansible.builtin.debug:
-    msg: x - {{ x }}

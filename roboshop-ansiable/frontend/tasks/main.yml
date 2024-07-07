@@ -1,3 +1,0 @@
-- name: demo on frntend
-  ansible.builtin.debug:
-    msg: component-frntend
