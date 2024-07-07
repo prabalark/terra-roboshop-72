@@ -1,0 +1,3 @@
+- name: demo on dispatch
+  ansible.builtin.debug:
+    msg: component-dispatch
