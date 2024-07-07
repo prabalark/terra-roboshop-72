@@ -1,4 +1,5 @@
  # in ansible we are keeping database_server & app_server are separate
+
 module "database_server" {
   for_each = var.database_server
 
