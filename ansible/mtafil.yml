@@ -1,3 +1,4 @@
 - hosts: all
   roles:
     -  "{{file_name}}"
+# giving folder-name as variable for multi-folders
