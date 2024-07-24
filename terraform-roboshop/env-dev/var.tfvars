@@ -45,11 +45,11 @@ app_server = {
     Name ="user"
     instance_type = "t3.micro"
   }
-#
-#  cart ={
-#    Name ="cart"
-#    instance_type = "t3.micro"
-#  }
+
+  cart ={
+    Name ="cart"
+    instance_type = "t3.micro"
+  }
 
 #  payment ={
 #    Name ="payment"
