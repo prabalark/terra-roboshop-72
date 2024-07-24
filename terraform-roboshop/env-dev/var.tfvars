@@ -14,11 +14,11 @@ database_server = {
     instance_type = "t3.small"
   }
 
-#  mysql ={
-#    Name ="mysql"
-#    instance_type = "t3.small"
-#    password="RoboShop@1"
-#  }
+  mysql ={
+    Name ="mysql"
+    instance_type = "t3.small"
+    password="RoboShop@1"
+  }
 #
 #  rabbitmq ={
 #    Name ="rabbitmq"
@@ -49,6 +49,12 @@ app_server = {
   cart ={
     Name ="cart"
     instance_type = "t3.micro"
+  }
+
+  shipping ={
+    Name ="shipping"
+    instance_type = "t3.medium"
+    password="RoboShop@1"
   }
 
 #  payment ={
