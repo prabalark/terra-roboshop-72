@@ -62,9 +62,9 @@ app_server = {
     password="RoboShop123"
   }
 
-#  dispatch ={
-#    Name ="dispatch"
-#    instance_type = "t3.small"
-#  }
+  dispatch ={
+    Name ="dispatch"
+    instance_type = "t3.small"
+  }
 
 }
