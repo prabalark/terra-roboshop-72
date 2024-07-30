@@ -1,8 +1,8 @@
-variable "env" {}            #modvar
-variable "compenent_name" {} #modvar
-variable "instance_type" {}  #modvar
-variable "password" {}       #modvar
-variable "provisioner" {     #modvar
+variable "env" {}
+variable "compenent_name" {}
+variable "instance_type" {}
+variable "password" {}
+variable "provisioner" {
   default = false
 }
 
