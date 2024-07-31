@@ -6,7 +6,7 @@ resource "aws_instance" "instance" {
 
   # keeping tags ,in terraform condition
   tags = {
-    Name = var.env !="" ? "${var.compenent_name}-${var.env}" : var.compenent_name
+    Name = local.name
   }
 }
 
