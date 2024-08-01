@@ -19,5 +19,6 @@ module "app_server" {
   compenent_name=each.value["Name"]
   env = var.env
   instance_type=each.value["instance_type"]
-  password=lookup(each.value,"password","null")
+  password=lookup(each.value,"password","null")  # if password is not there then passing null
+  provisioner=true
 }

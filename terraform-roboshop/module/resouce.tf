@@ -22,12 +22,14 @@ resource "null_resource" "provisioner13" {
       password = "DevOps321"
       host = aws_instance.instance.private_ip      # single instance
     }
-    inline = [
-      "rm -rf terraform-roboshop",
-      "git clone https://github.com/prabalark/roboshop-72.git",
-      "cd roboshop-72",
-      "sudo bash ${var.compenent_name}.sh  ${var.password} "
-    ]
+    #inline = [
+    #  "rm -rf terraform-roboshop", #this shell git-hub
+    #  "git clone https://github.com/prabalark/roboshop-72.git",
+    #  "cd roboshop-72",
+    #  "sudo bash ${var.compenent_name}.sh  ${var.password} "
+    #]
+
+    inline = var.app_type == db ? local.db_commands : local.app_commands
   }
 }
 
