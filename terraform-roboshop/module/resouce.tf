@@ -29,7 +29,7 @@ resource "null_resource" "provisioner13" {
     #  "sudo bash ${var.compenent_name}.sh  ${var.password} "
     #]
 
-    inline = var.app_type == db ? local.db_commands : local.app_commands
+    inline = var.app_type =="db" ? local.db_commands : local.app_commands
   }
 }
 
