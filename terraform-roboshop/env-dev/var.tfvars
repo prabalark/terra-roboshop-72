@@ -43,24 +43,24 @@ app_server = {
    user ={
      Name ="user"
      instance_type = "t3.micro"
-   }
+  }
 
    cart ={
      Name ="cart"
      instance_type = "t3.micro"
-   }
+  }
 
    shipping ={
      Name ="shipping"
      instance_type = "t3.medium"
      password="RoboShop@1"
-  # }
+  }
 
-    payment ={
-      Name ="payment"
-      instance_type = "t3.small"
-      password="RoboShop123"
-    }
+  payment ={
+     Name ="payment"
+     instance_type = "t3.small"
+     password="RoboShop123"
+  }
 
   # dispatch ={    # to check the log in payment only use with dispatch
   #   Name ="dispatch"
