@@ -11,8 +11,8 @@ resource "aws_instance" "instance" {
 }
 
   # create shell
-resource "null_resource" "provisioner13" {
-  count = var.provisioner ? 1 : 0
+  resource "null_resource" "provisioner13" {
+   # count = var.provisioner ? 1 : 0 [ no need in local.tf ]
   depends_on = [aws_instance.instance, aws_route53_record.records]
 
   provisioner "remote-exec" {
@@ -27,7 +27,7 @@ resource "null_resource" "provisioner13" {
 
     #inline = [
     #  "rm -rf terraform-roboshop", #this is shell git-hub
-    #  "git clone https://github.com/prabalark/roboshop-72.git",   #this is shell git-hub
+    #  "git clone https://github.com/prabalark/roboshop-72.git",  #this is shell git-hub
     #  "cd roboshop-72",
     #  "sudo bash ${var.compenent_name}.sh  ${var.password} "
     #]
