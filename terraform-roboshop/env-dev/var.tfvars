@@ -30,15 +30,15 @@ database_server = {
 
 app_server = {
 
-  frontend ={
-    Name ="frontend"
-    instance_type = "t3.small"
-  }
+   frontend ={
+     Name ="frontend"
+     instance_type = "t3.small"
+   }
 
-  catalogue ={
-    Name ="catalogue"
-    instance_type = "t3.micro"
-  }
+   catalogue ={
+     Name ="catalogue"
+     instance_type = "t3.micro"
+   }
 
    user ={
      Name ="user"
