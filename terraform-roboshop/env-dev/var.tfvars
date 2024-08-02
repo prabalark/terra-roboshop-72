@@ -56,7 +56,7 @@ app_server = {
      password="RoboShop@1"
   }
 
-  payment ={
+   payment ={
      Name ="payment"
      instance_type = "t3.small"
      password="RoboShop123"
