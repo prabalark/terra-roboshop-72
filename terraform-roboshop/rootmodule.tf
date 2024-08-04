@@ -22,5 +22,5 @@ module "app_server" {
   instance_type=each.value["instance_type"]
   password=lookup(each.value,"password","null")  # if password is not there then passing null
   provisioner=true
-  app_type = "db"
+  app_type = "app"
 }
