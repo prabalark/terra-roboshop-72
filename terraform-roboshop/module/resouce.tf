@@ -69,7 +69,7 @@ resource "aws_iam_role" "test_role" {
 
 # this will create aws_iam_policy and attached to roles also [ in aws--> policy ]
 resource "aws_iam_policy" "aws_ssm_policy" {
-  name        = "${var.compenent_name}-${var.env}-aws-ssm-policy"
+  name  = "${var.compenent_name}-${var.env}-aws-ssm-policy"
 
   policy = jsonencode({
     "Version": "2012-10-17",
@@ -92,4 +92,5 @@ resource "aws_iam_policy" "aws_ssm_policy" {
         "Resource": "*"
       }
     ]
-  }
+  })
+}
