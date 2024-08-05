@@ -74,7 +74,7 @@ resource "aws_iam_instance_profile" "instance_profile" {
 # this will create aws_iam_policy and attached to roles also [ in aws--> policy & check aws--> roles ]
 resource "aws_iam_policy" "aws_ssm_policy" {
    name = "${var.compenent_name}-${var.env}-aws_ssm_policy"
-   role = aws_iam_role.test_role.id     #this is link between role & policy
+   # role = aws_iam_role.test_role.id     #this is link between role & policy
 
   policy = jsonencode({
     "Version": "2012-10-17",
