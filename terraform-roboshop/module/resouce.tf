@@ -71,7 +71,7 @@ resource "aws_iam_instance_profile" "instance_profile" {
   role = aws_iam_role.test_role.name
 }
 
-# this will create aws_iam_policy and attached to roles also [ in aws--> policy ]
+# this will create aws_iam_policy and attached to roles also [ in aws--> policy & check aws--> roles ]
 resource "aws_iam_policy" "aws_ssm_policy" {
   name  = "${var.compenent_name}-${var.env}-aws-ssm-policy"
 
