@@ -3,7 +3,7 @@ resource "aws_instance" "instance" {
   ami           = data.aws_ami.ami.image_id # devops-practice
   instance_type = var.instance_type
   vpc_security_group_ids = [data.aws_security_group.security_group.id]
-  iam_instance_profile= aws_iam_instance_profile.instance_profile.name
+  #iam_instance_profile= aws_iam_instance_profile.instance_profile.name
   # keeping tags ,in terraform condition
   tags = {
     Name = var.compenent_name  #for parameter hange this
@@ -12,7 +12,7 @@ resource "aws_instance" "instance" {
 
   # create shell
   resource "null_resource" "provisioner13" {
-   count = var.provisioner ? 1 : 0 [ no need in local.tf ]
+   count = var.provisioner ? 1 : 0 #[ no need in local.tf ]
   depends_on = [aws_instance.instance, aws_route53_record.records]
 
   provisioner "remote-exec" {
