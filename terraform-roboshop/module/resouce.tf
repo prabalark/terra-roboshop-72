@@ -44,58 +44,58 @@ resource "aws_route53_record" "records" {
 }
 
 # this will create aws_iam_role [ in aws--> roles ]
-resource "aws_iam_role" "test_role" {
-  name = "${var.compenent_name}-${var.env}-role"
-
-  assume_role_policy = jsonencode({
-    Version = "2012-10-17"
-    Statement = [
-      {
-        Action = "sts:AssumeRole"
-        Effect = "Allow"
-        Sid    = ""
-        Principal = {
-          Service = "ec2.amazonaws.com" # this is imp
-        }
-      },
-    ]
-  })
-
-  tags = {
-    tag-key = "${var.compenent_name}-${var.env}-role"
-  }
-}
-
-resource "aws_iam_instance_profile" "instance_profile" {
-  name = "${var.compenent_name}-${var.env}-role"
-  role = aws_iam_role.test_role.name
-}
-
-# this will create aws_iam_policy and attached to roles also [ in aws--> policy & check aws--> roles ]
-resource "aws_iam_role_policy" "aws_ssm_policy" {
-   name = "${var.compenent_name}-${var.env}-aws_ssm_policy"
-   role = aws_iam_role.test_role.id     #this is link between role & policy
-
-  policy = jsonencode({
-    "Version": "2012-10-17",
-    "Statement": [
-      {
-        "Sid": "VisualEditor0",
-        "Effect": "Allow",
-        "Action": [
-          "ssm:GetParameterHistory",
-          "ssm:GetParametersByPath",
-          "ssm:GetParameters",
-          "ssm:GetParameter"
-        ],
-        "Resource": "arn:aws:ssm:us-east-1:605698327224:parameter/${var.env}.${var.compenent_name}.*"  #change to this [ dev.frontend.*" ]
-      },
-      {
-        "Sid": "VisualEditor1",
-        "Effect": "Allow",
-        "Action": "ssm:DescribeParameters",
-        "Resource": "*"
-      }
-    ]
-  })
-}
+#resource "aws_iam_role" "test_role" {
+#  name = "${var.compenent_name}-${var.env}-role"
+#
+#  assume_role_policy = jsonencode({
+#    Version = "2012-10-17"
+#    Statement = [
+#      {
+#        Action = "sts:AssumeRole"
+#        Effect = "Allow"
+#        Sid    = ""
+#        Principal = {
+#          Service = "ec2.amazonaws.com" # this is imp
+#        }
+#      },
+#    ]
+#  })
+#
+#  tags = {
+#    tag-key = "${var.compenent_name}-${var.env}-role"
+#  }
+#}
+#
+#resource "aws_iam_instance_profile" "instance_profile" {
+#  name = "${var.compenent_name}-${var.env}-role"
+#  role = aws_iam_role.test_role.name
+#}
+#
+## this will create aws_iam_policy and attached to roles also [ in aws--> policy & check aws--> roles ]
+#resource "aws_iam_role_policy" "aws_ssm_policy" {
+#   name = "${var.compenent_name}-${var.env}-aws_ssm_policy"
+#   role = aws_iam_role.test_role.id     #this is link between role & policy
+#
+#  policy = jsonencode({
+#    "Version": "2012-10-17",
+#    "Statement": [
+#      {
+#        "Sid": "VisualEditor0",
+#        "Effect": "Allow",
+#        "Action": [
+#          "ssm:GetParameterHistory",
+#          "ssm:GetParametersByPath",
+#          "ssm:GetParameters",
+#          "ssm:GetParameter"
+#        ],
+#        "Resource": "arn:aws:ssm:us-east-1:605698327224:parameter/${var.env}.${var.compenent_name}.*"  #change to this [ dev.frontend.*" ]
+#      },
+#      {
+#        "Sid": "VisualEditor1",
+#        "Effect": "Allow",
+#        "Action": "ssm:DescribeParameters",
+#        "Resource": "*"
+#      }
+#    ]
+#  })
+#}
