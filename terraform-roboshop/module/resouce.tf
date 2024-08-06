@@ -4,7 +4,7 @@ resource "aws_instance" "instance" {
   instance_type = var.instance_type
   vpc_security_group_ids = [data.aws_security_group.security_group.id]
   iam_instance_profile= aws_iam_instance_profile.instance_profile.name
-  keeping tags ,in terraform condition
+   #keeping tags ,in terraform condition
   tags = {
     Name = var.compenent_name  #for parameter hange this
   }
