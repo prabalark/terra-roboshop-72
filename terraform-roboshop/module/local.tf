@@ -13,6 +13,6 @@
 #     // "ansible-pull -i localhost, -U https://github.com/prabalark/roboshop-ansible-72.git roboshop-ani.yml -e role_name=${var.compenent_name} -e env=${var.env}",
 #      "echo ok"
 #    ]
-#
+
 #}
 
