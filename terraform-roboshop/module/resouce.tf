@@ -6,7 +6,7 @@ resource "aws_instance" "instance" {
   iam_instance_profile= aws_iam_instance_profile.instance_profile.name
   # keeping tags ,in terraform condition
   tags = {
-    Name = local.name
+    Name = var.compenent_name  #for parameter hange this
   }
 }
 
