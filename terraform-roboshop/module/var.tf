@@ -5,5 +5,5 @@ variable "password" {}
 variable "provisioner" {
   default = false
 }
-# variable "app_type" {} # [ only in local.tf ]
+variable "app_type" {} # [ only in local.tf ]
 
