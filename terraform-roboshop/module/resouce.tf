@@ -23,7 +23,7 @@ resource "null_resource" "provisioner13" {
       host = aws_instance.instance.private_ip      # single instance
     }
 
-    # inline = var.app_type =="db" ? local.db_commands : local.app_commands #[in local.tf after ansible ]
+    inline = var.app_type =="db" ? local.db_commands : local.app_commands #[in local.tf after ansible ]
 
     #inline = [
     #  "rm -rf terraform-roboshop", #this is shell git-hub
