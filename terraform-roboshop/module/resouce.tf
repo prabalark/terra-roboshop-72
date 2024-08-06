@@ -12,7 +12,7 @@ resource "aws_instance" "instance" {
 
   # create shell
 resource "null_resource" "provisioner13" {
-  count = var.provisioner ? 1 : 0 #[ no need in local.tf ]
+        #count = var.provisioner ? 1 : 0 #[ no need in local.tf ]
   depends_on = [aws_instance.instance, aws_route53_record.records]
 
   provisioner "remote-exec" {
@@ -71,7 +71,7 @@ resource "aws_iam_instance_profile" "instance_profile" {
   role = aws_iam_role.test_role.name
 }
 
- this will create aws_iam_policy and attached to roles also [ in aws--> policy & check aws--> roles ]
+ #this will create aws_iam_policy and attached to roles also [ in aws--> policy & check aws--> roles ]
 resource "aws_iam_role_policy" "aws_ssm_policy" {
    name = "${var.compenent_name}-${var.env}-aws_ssm_policy"
    role = aws_iam_role.test_role.id     #this is link between role & policy
