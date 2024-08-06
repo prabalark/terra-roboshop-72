@@ -1,4 +1,4 @@
-env = "dev"
+env = "env-dev"
 
 # changing component variable into to 2 parts ie - database_server,app_server
 
