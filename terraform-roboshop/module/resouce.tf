@@ -88,14 +88,17 @@ resource "aws_iam_role_policy" "aws_ssm_policy" {
           "ssm:GetParameters",
           "ssm:GetParameter"
         ],
-        "Resource": "arn:aws:ssm:us-east-1:605698327224:parameter/${var.env}.${var.compenent_name}.*"  #change to this [ dev.frontend.*" ]
+        "Resource": "arn:aws:ssm:us-east-1:605698327224:parameter/${var.env}.${var.compenent_name}.*"
       },
       {
         "Sid": "VisualEditor1",
         "Effect": "Allow",
-        "Action": "ssm:DescribeParameters",
+        "Action": [
+          "kms:Decrypt"
+        ],
         "Resource": "*"
       }
     ]
   })
 }
+
