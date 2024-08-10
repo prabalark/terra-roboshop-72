@@ -102,3 +102,4 @@ resource "aws_iam_role_policy" "aws_ssm_policy" {
   })
 }
 
+
