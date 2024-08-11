@@ -23,7 +23,7 @@ database_server = {
   rabbitmq ={
     Name ="rabbitmq"
     instance_type = "t3.small"
-    password="RoboShop123"
+    password="roboshop123"
   }
 
 }
@@ -53,13 +53,11 @@ app_server = {
    shipping ={
      Name ="shipping"
      instance_type = "t3.medium"
-     password="RoboShop@1"
   }
 
    payment ={
      Name ="payment"
      instance_type = "t3.small"
-     password="RoboShop123"
   }
 
   # dispatch ={    # to check the log in payment only use with dispatch
