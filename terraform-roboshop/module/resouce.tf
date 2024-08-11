@@ -15,6 +15,10 @@ resource "null_resource" "provisioner13" {
         #count = var.provisioner ? 1 : 0 #[ no need in local.tf ]
   depends_on = [aws_instance.instance, aws_route53_record.records]
 
+   triggers = {  #We are informing the null resource ,if any private ip is changed then keep reference from instance and run provisioner
+     privateip=aws_instance.instance.private_ip
+   }
+
   provisioner "remote-exec" {
     connection {
       type = "ssh"
