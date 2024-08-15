@@ -23,7 +23,7 @@ database_server = {
   rabbitmq ={
     Name ="rabbitmq"
     instance_type = "t3.small"
-    password="roboShop123" #roboshop123
+    password="roboshop123" #roboshop123
   }
 
 }
