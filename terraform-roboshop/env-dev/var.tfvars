@@ -14,17 +14,17 @@ database_server = {
     instance_type = "t3.small"
   }
 
-#  mysql ={
-#    Name ="mysql"
-#    instance_type = "t3.small"
-#    password="RoboShop@1"
-#  }
-#
-#  rabbitmq ={
-#    Name ="rabbitmq"
-#    instance_type = "t3.small"
-#    password="roboshop123" #roboshop123
-#  }
+  mysql ={
+    Name ="mysql"
+    instance_type = "t3.small"
+    password="RoboShop@1"
+  }
+
+  rabbitmq ={
+    Name ="rabbitmq"
+    instance_type = "t3.small"
+    password="roboshop123" #roboshop123
+  }
 
 }
 
@@ -50,15 +50,15 @@ app_server = {
      instance_type = "t3.micro"
   }
 
-#   shipping ={
-#     Name ="shipping"
-#     instance_type = "t3.medium"
-#  }
-#
-#   payment ={
-#     Name ="payment"
-#     instance_type = "t3.small"
-#  }
+   shipping ={
+     Name ="shipping"
+     instance_type = "t3.medium"
+  }
+
+   payment ={
+     Name ="payment"
+     instance_type = "t3.small"
+  }
 
   # dispatch ={    # to check the log in payment only use with dispatch
   #   Name ="dispatch"
