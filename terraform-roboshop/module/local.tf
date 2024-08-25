@@ -12,6 +12,13 @@ locals {
       "sudo labauto ansible" ,
       "ansible-pull -i localhost, -U https://github.com/prabalark/roboshop-ansible-72.git roboshop-ani.yml -e role_name=${var.compenent_name} -e env=${var.env}"
     ]
+    db_tags = {
+        Name = "${var.compenent_name}-${var.env}"
+        }
+    app_tags ={
+        Name = "${var.compenent_name}-${var.env}"
+        Monitor = true
+        }
 
 }
 

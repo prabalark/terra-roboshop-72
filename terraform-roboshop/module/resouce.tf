@@ -5,9 +5,7 @@ resource "aws_instance" "instance" {
   vpc_security_group_ids = [data.aws_security_group.security_group.id]
   iam_instance_profile= aws_iam_instance_profile.instance_profile.name
    #keeping tags ,in terraform condition
-  tags = {
-    Name = local.name  #for parameter change this var.compenent_name
-  }
+  tags = var.app_type ="app" ? local.app_type : local.db_tags
 }
 
   # create shell
