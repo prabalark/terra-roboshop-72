@@ -6,6 +6,7 @@ resource "aws_instance" "instance" {
   iam_instance_profile= aws_iam_instance_profile.instance_profile.name
    #keeping tags ,in terraform condition
   tags = var.app_type == "app" ? local.app_tags : local.db_tags
+   #check in rootmodule.tf for var.app_type
 }
 
   # create shell
