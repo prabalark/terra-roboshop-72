@@ -19,6 +19,5 @@ locals {
        name = "${var.compenent_name}-${var.env}"
        monitor = "true"
     }
-
 }
 
