@@ -13,13 +13,13 @@ locals {
       "ansible-pull -i localhost, -U https://github.com/prabalark/roboshop-ansible-72.git roboshop-ani.yml -e role_name=${var.compenent_name} -e env=${var.env}"
     ]
     db_tags = {
-       Name = "${var.compenent_name}-${var.env}"
+       Name = "${var.compenent_name}-${var.env}"  # Name : this var we have to give as per tarraform variable
     }
     app_tags = {
        Name = "${var.compenent_name}-${var.env}"
        monitor = "true"
-       component = var.compenent_name
-       env = var.env
+       #component = var.compenent_name
+       #env = var.env
     }
 }
 
